@@ -1,110 +1,375 @@
-Privacy Policy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – IEdit: Photo Background Remover</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-IEdit: Photo Background Remover
-Effective Date: March 4, 2026
-Last Updated: March 4, 2026
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --accent: #1a1a2e;
+      --accent2: #4f46e5;
+      --text: #1c1c1e;
+      --muted: #6b6b6b;
+      --border: #e5e2db;
+      --radius: 12px;
+    }
 
- 
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
 
-1. Introduction
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-Welcome to IEdit: Photo Background Remover ("IEdit", "the App", "we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our iOS application, which allows you to remove image backgrounds and replace them with solid colors or gradient backgrounds.
-Please read this Privacy Policy carefully. By downloading, installing, or using IEdit, you agree to the practices described in this document. If you do not agree with this policy, please do not use the App.
- 
-2. Information We Collect
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, #4f46e540 0%, transparent 70%),
+                  radial-gradient(ellipse at 20% 80%, #7c3aed30 0%, transparent 60%);
+      pointer-events: none;
+    }
 
-2.1 Images You Provide
-IEdit only processes images that you explicitly select and upload within the App for background removal. These images are used solely to perform the background removal and background replacement functionality you request.
-2.2 What We Do NOT Collect
-We want to be fully transparent: IEdit does not collect, store, transmit, or share any of the following:
-• Personal identification information (name, email address, phone number, etc.)
-• Device identifiers or advertising IDs
-• Location data
-• Usage analytics or behavioral data
-• Crash reports or diagnostic data sent to our servers
-• Any data from your contacts, camera roll, or other device resources beyond what you explicitly select
-• Payment or financial information
- 
-3. How We Use Your Images
+    header .app-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      position: relative;
+    }
 
-Images you provide to IEdit are used exclusively for the following purposes:
-• To process and remove the background from your selected photo.
-• To apply your chosen solid color or gradient background to the processed image.
-• To generate and display the final edited image for you to review and export.
- 
-Image Deletion Policy
-All images you upload into IEdit are processed locally on your device or temporarily in memory. Once you export or save the final edited image, all source and intermediate image data associated with that session is permanently deleted. We do not retain copies of your original photos, processed images, or any derivatives thereof.
- 
-4. Local & On-Device Processing
+    header .subtitle {
+      font-size: 0.9rem;
+      color: #a5a3b0;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      position: relative;
+    }
 
-IEdit is designed with privacy at its core. All image processing — including background removal and background replacement — is performed locally on your device. Your photos are never uploaded to our servers or any third-party cloud service for processing.
-This means:
-• Your images never leave your device during processing.
-• No internet connection is required to remove or replace a background.
-• We have no access to your images at any point.
- 
-5. Data Sharing and Third Parties
+    .dates {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 24px;
+      font-size: 0.82rem;
+      color: #8e8c99;
+      position: relative;
+    }
 
-Because we do not collect your personal data or store your images, there is nothing to share. We do not:
-• Sell, rent, or trade any user data or images to third parties.
-• Share data with advertisers, analytics providers, or marketing partners.
-• Use third-party SDKs that collect personal information.
- 
-The App does not contain advertisements or third-party tracking frameworks.
- 
-6. Data Retention
+    .dates span strong {
+      color: #c4c2ce;
+      font-weight: 500;
+    }
 
-We follow a strict data minimization and no-retention policy:
-• Images uploaded for processing are deleted immediately after the edited image is exported from the App.
-• We do not maintain any database, server-side storage, or backup of user images.
-• No personal information is retained by us at any point.
- 
-7. App Permissions
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
 
-IEdit may request the following iOS permissions solely to deliver its core functionality:
-• Photo Library Access: To allow you to select images from your device for background removal. We access only the specific photos you choose. We do not browse, read, or copy any other photos in your library.
-• Camera Access (if applicable): To allow you to capture a new photo directly within the App for immediate processing. Photos taken via the camera are used only for the current editing session.
- 
-You can manage and revoke these permissions at any time via your iPhone's Settings app under Privacy & Security.
- 
-8. Children's Privacy
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
 
-IEdit is not directed toward children under the age of 13, and we do not knowingly collect any personal information from children. Since the App does not collect personal data from any users, there is no risk of inadvertent data collection from minors. If you are a parent or guardian and believe your child has provided personal information through the App, please contact us and we will address the matter promptly.
- 
-9. Security
+    .toc h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
 
-We take the security of your information seriously. Because all image processing occurs on-device and no personal data or images are transmitted to or stored on our servers, the privacy risk to users is minimal by design. The App does not create or maintain an account system, so there are no credentials or user profiles to protect.
-We recommend that you keep your iOS device and the App updated to the latest version to benefit from the most current security protections offered by Apple and our App updates.
- 
-10. Your Rights
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
 
-Since IEdit does not collect, store, or process any personal data about you beyond the transient handling of images you choose to edit, there is no personal data profile to access, correct, or delete. However, you always retain full control:
-• You decide which images to upload to the App.
-• You can stop using the App at any time.
-• You can delete the App from your device at any time, which removes all App data from your device.
- 
-If you are located in a jurisdiction with specific data protection rights (such as the EU/EEA under GDPR, or California under CCPA), you may have additional rights. Because we do not collect personal data, those rights are not practically applicable. However, you are welcome to contact us with any inquiries.
- 
-11. International Users
+    .toc ol li a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
 
-GDPR (European Users)
-IEdit does not collect, process, or store personal data as defined under the General Data Protection Regulation (GDPR). We do not operate as a data controller or data processor of personal information in the GDPR sense, as no personal data is gathered from users.
-CCPA (California Users)
-IEdit does not sell personal information and does not collect personal information as defined by the California Consumer Privacy Act (CCPA). California residents therefore have no personal data to access, delete, or opt out from the sale of.
- 
-12. Changes to This Privacy Policy
+    .toc ol li a:hover { color: var(--accent); text-decoration: underline; }
 
-We reserve the right to update this Privacy Policy from time to time to reflect changes in our practices, App features, or legal requirements. When we make changes, we will update the "Last Updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically.
-Continued use of the App after any changes to this Privacy Policy constitutes your acceptance of the revised policy.
- 
-13. Contact Us
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 24px;
+    }
 
-If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
- 
-IEdit: Photo Background Remover
-Email: anasabdullah0024@gmail.com
-App Store: IEdit: Photo Background Remover
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      color: var(--accent);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
 
- 
+    section h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: 20px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
 
-© 2026 IEdit: Photo Background Remover. All rights reserved.
+    section p {
+      font-size: 0.95rem;
+      color: #3a3a3a;
+      margin-bottom: 14px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 16px;
+    }
+
+    ul li {
+      font-size: 0.9rem;
+      color: #3a3a3a;
+      padding: 6px 0 6px 22px;
+      position: relative;
+      border-bottom: 1px solid #f0ede8;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent2);
+      font-weight: 500;
+    }
+
+    .highlight-box {
+      background: #f0eeff;
+      border-left: 3px solid var(--accent2);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #2d2b4e;
+    }
+
+    .contact-card {
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-top: 16px;
+    }
+
+    .contact-card p { color: #c4c2ce; font-size: 0.9rem; margin-bottom: 8px; }
+    .contact-card a { color: #a5b4fc; text-decoration: none; font-weight: 500; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 540px) {
+      .toc ol { grid-template-columns: 1fr; }
+      .dates { flex-direction: column; gap: 6px; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-name">IEdit: Photo Background Remover</div>
+  <div class="subtitle">Privacy Policy</div>
+  <div class="dates">
+    <span><strong>Effective Date:</strong> March 4, 2026</span>
+    <span><strong>Last Updated:</strong> March 4, 2026</span>
+  </div>
+</header>
+
+<main>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Introduction</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">How We Use Your Images</a></li>
+      <li><a href="#s4">Local &amp; On-Device Processing</a></li>
+      <li><a href="#s5">Data Sharing and Third Parties</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">App Permissions</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Security</a></li>
+      <li><a href="#s10">Your Rights</a></li>
+      <li><a href="#s11">International Users</a></li>
+      <li><a href="#s12">Changes to This Privacy Policy</a></li>
+      <li><a href="#s13">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <section id="s1">
+    <h2>1. Introduction</h2>
+    <p>Welcome to IEdit: Photo Background Remover ("IEdit", "the App", "we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our iOS application, which allows you to remove image backgrounds and replace them with solid colors or gradient backgrounds.</p>
+    <p>Please read this Privacy Policy carefully. By downloading, installing, or using IEdit, you agree to the practices described in this document. If you do not agree with this policy, please do not use the App.</p>
+  </section>
+
+  <section id="s2">
+    <h2>2. Information We Collect</h2>
+    <h3>2.1 Images You Provide</h3>
+    <p>IEdit only processes images that you explicitly select and upload within the App for background removal. These images are used solely to perform the background removal and background replacement functionality you request.</p>
+    <h3>2.2 What We Do NOT Collect</h3>
+    <p>We want to be fully transparent: IEdit does not collect, store, transmit, or share any of the following:</p>
+    <ul>
+      <li>Personal identification information (name, email address, phone number, etc.)</li>
+      <li>Device identifiers or advertising IDs</li>
+      <li>Location data</li>
+      <li>Usage analytics or behavioral data</li>
+      <li>Crash reports or diagnostic data sent to our servers</li>
+      <li>Any data from your contacts, camera roll, or other device resources beyond what you explicitly select</li>
+      <li>Payment or financial information</li>
+    </ul>
+  </section>
+
+  <section id="s3">
+    <h2>3. How We Use Your Images</h2>
+    <p>Images you provide to IEdit are used exclusively for the following purposes:</p>
+    <ul>
+      <li>To process and remove the background from your selected photo.</li>
+      <li>To apply your chosen solid color or gradient background to the processed image.</li>
+      <li>To generate and display the final edited image for you to review and export.</li>
+    </ul>
+    <h3>Image Deletion Policy</h3>
+    <p>All images you upload into IEdit are processed locally on your device or temporarily in memory. Once you export or save the final edited image, all source and intermediate image data associated with that session is permanently deleted. We do not retain copies of your original photos, processed images, or any derivatives thereof.</p>
+  </section>
+
+  <section id="s4">
+    <h2>4. Local &amp; On-Device Processing</h2>
+    <div class="highlight-box">
+      IEdit is designed with privacy at its core. All image processing — including background removal and background replacement — is performed locally on your device. Your photos are never uploaded to our servers or any third-party cloud service for processing.
+    </div>
+    <p>This means:</p>
+    <ul>
+      <li>Your images never leave your device during processing.</li>
+      <li>No internet connection is required to remove or replace a background.</li>
+      <li>We have no access to your images at any point.</li>
+    </ul>
+  </section>
+
+  <section id="s5">
+    <h2>5. Data Sharing and Third Parties</h2>
+    <p>Because we do not collect your personal data or store your images, there is nothing to share. We do not:</p>
+    <ul>
+      <li>Sell, rent, or trade any user data or images to third parties.</li>
+      <li>Share data with advertisers, analytics providers, or marketing partners.</li>
+      <li>Use third-party SDKs that collect personal information.</li>
+    </ul>
+    <p>The App does not contain advertisements or third-party tracking frameworks.</p>
+  </section>
+
+  <section id="s6">
+    <h2>6. Data Retention</h2>
+    <p>We follow a strict data minimization and no-retention policy:</p>
+    <ul>
+      <li>Images uploaded for processing are deleted immediately after the edited image is exported from the App.</li>
+      <li>We do not maintain any database, server-side storage, or backup of user images.</li>
+      <li>No personal information is retained by us at any point.</li>
+    </ul>
+  </section>
+
+  <section id="s7">
+    <h2>7. App Permissions</h2>
+    <p>IEdit may request the following iOS permissions solely to deliver its core functionality:</p>
+    <ul>
+      <li><strong>Photo Library Access:</strong> To allow you to select images from your device for background removal. We access only the specific photos you choose. We do not browse, read, or copy any other photos in your library.</li>
+      <li><strong>Camera Access (if applicable):</strong> To allow you to capture a new photo directly within the App for immediate processing. Photos taken via the camera are used only for the current editing session.</li>
+    </ul>
+    <p>You can manage and revoke these permissions at any time via your iPhone's Settings app under Privacy &amp; Security.</p>
+  </section>
+
+  <section id="s8">
+    <h2>8. Children's Privacy</h2>
+    <p>IEdit is not directed toward children under the age of 13, and we do not knowingly collect any personal information from children. Since the App does not collect personal data from any users, there is no risk of inadvertent data collection from minors. If you are a parent or guardian and believe your child has provided personal information through the App, please contact us and we will address the matter promptly.</p>
+  </section>
+
+  <section id="s9">
+    <h2>9. Security</h2>
+    <p>We take the security of your information seriously. Because all image processing occurs on-device and no personal data or images are transmitted to or stored on our servers, the privacy risk to users is minimal by design. The App does not create or maintain an account system, so there are no credentials or user profiles to protect.</p>
+    <p>We recommend that you keep your iOS device and the App updated to the latest version to benefit from the most current security protections offered by Apple and our App updates.</p>
+  </section>
+
+  <section id="s10">
+    <h2>10. Your Rights</h2>
+    <p>Since IEdit does not collect, store, or process any personal data about you beyond the transient handling of images you choose to edit, there is no personal data profile to access, correct, or delete. However, you always retain full control:</p>
+    <ul>
+      <li>You decide which images to upload to the App.</li>
+      <li>You can stop using the App at any time.</li>
+      <li>You can delete the App from your device at any time, which removes all App data from your device.</li>
+    </ul>
+    <p>If you are located in a jurisdiction with specific data protection rights (such as the EU/EEA under GDPR, or California under CCPA), you may have additional rights. Because we do not collect personal data, those rights are not practically applicable. However, you are welcome to contact us with any inquiries.</p>
+  </section>
+
+  <section id="s11">
+    <h2>11. International Users</h2>
+    <h3>GDPR (European Users)</h3>
+    <p>IEdit does not collect, process, or store personal data as defined under the General Data Protection Regulation (GDPR). We do not operate as a data controller or data processor of personal information in the GDPR sense, as no personal data is gathered from users.</p>
+    <h3>CCPA (California Users)</h3>
+    <p>IEdit does not sell personal information and does not collect personal information as defined by the California Consumer Privacy Act (CCPA). California residents therefore have no personal data to access, delete, or opt out from the sale of.</p>
+  </section>
+
+  <section id="s12">
+    <h2>12. Changes to This Privacy Policy</h2>
+    <p>We reserve the right to update this Privacy Policy from time to time to reflect changes in our practices, App features, or legal requirements. When we make changes, we will update the "Last Updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically.</p>
+    <p>Continued use of the App after any changes to this Privacy Policy constitutes your acceptance of the revised policy.</p>
+  </section>
+
+  <section id="s13">
+    <h2>13. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
+    <div class="contact-card">
+      <p><strong style="color:#fff;">IEdit: Photo Background Remover</strong></p>
+      <p>Email: <a href="mailto:anasabdullah0024@gmail.com">anasabdullah0024@gmail.com</a></p>
+      <p>App Store: IEdit: Photo Background Remover</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 IEdit: Photo Background Remover. All rights reserved.
+</footer>
+
+</body>
+</html>
